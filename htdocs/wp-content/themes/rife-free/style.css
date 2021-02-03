@@ -104,6 +104,16 @@ th, td{
 }
 
 
+/* =============================================================================
+   FONT
+   ========================================================================== */
+@font-face {
+    font-family: Optima;  
+    src: url(http://www.milenagulloartista.com/wp-content/themes/rife-free/fonts/OPTIMA.ttf);  
+    font-weight: normal;  
+}
+
+
 
 /* =============================================================================
    Preloader
@@ -263,6 +273,8 @@ input[name=cptch_number]{
 .wpforms-form textarea{
 	max-width: none;
 }
+
+
 
 
 

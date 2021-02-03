@@ -1,7 +1,4 @@
 <?php
-define('WPFC_DISABLE_REDIRECTION', true);
-define('WP_CACHE', true);
-define('DISALLOW_FILE_EDIT', false);
 /**
  * Il file base di configurazione di WordPress.
  *
@@ -20,19 +17,26 @@ define('DISALLOW_FILE_EDIT', false);
  *
  * @package WordPress
  */
+
 // ** Impostazioni MySQL - È possibile ottenere queste informazioni dal proprio fornitore di hosting ** //
 /** Il nome del database di WordPress */
-define('DB_NAME', 'milenagu41366');
+define('DB_NAME', 'wpartistamilena');
+
 /** Nome utente del database MySQL */
-define('DB_USER', 'milenagu41366');
+define('DB_USER', 'root');
+
 /** Password del database MySQL */
-define('DB_PASSWORD', 'mile43645');
+define('DB_PASSWORD', '');
+
 /** Hostname MySQL  */
-define('DB_HOST', 'sql.milenagulloartista.com');
+define('DB_HOST', 'localhost');
+
 /** Charset del Database da utilizzare nella creazione delle tabelle. */
 define('DB_CHARSET', 'utf8');
+
 /** Il tipo di Collazione del Database. Da non modificare se non si ha idea di cosa sia. */
 define('DB_COLLATE', '');
+
 /**#@+
  * Chiavi Univoche di Autenticazione e di Salatura.
  *
@@ -42,15 +46,17 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY', 'qhQ1W30T|hwcVSVw!;[XjA+EZ+mXjd&/vTf$Q.)g6c- n26n.4BHZN~XJ5U0lzx%');
-define('SECURE_AUTH_KEY', 's|v{n~Xs4Ig-l D0<qu@m%Z%)XNls<N.*QmITL$ym+NG[32Uuy1o.is4%1X5j >+');
-define('LOGGED_IN_KEY', '<CX4ngg`UJjytQz#&,PhUb%7ls1MX=60-)BW;*21Af,XnI^8h5ob3`^uhP`eD*-1');
-define('NONCE_KEY', 'N!,gX_$gXB91X nf4n4=OQz$CtG.W8&+}ThOX9nFc8^&|PirqS:GW)zG;;,NSk-k');
-define('AUTH_SALT', 'nGDo-(_G%dVc$]rY9BE)m=1_qa)Odw[ci<NK*=We->aHeEiB#dz1cXHzkjPCPiq5');
-define('SECURE_AUTH_SALT', 'M<23,L97-^5;74mhte,RW#5tCRNg+k-$:Z&SK-n{14u9n,uicKu)|j7louAt[aQ6');
-define('LOGGED_IN_SALT', '5F a1X:J!ayF|_&}u[ikO<LJ,:RA(!<gJT}71v~_,>)$x<T9Xw<iuw|7}V7Tj/=}');
-define('NONCE_SALT', 'HU3;_(SQ/2DHhA6-87+jh@*;P}{5koPw=dv~l*l@GA;C,}w]AI-IbrZ#G$AL@`>!');
+define('AUTH_KEY',         'Mettere la vostra frase unica qui');
+define('SECURE_AUTH_KEY',  'Mettere la vostra frase unica qui');
+define('LOGGED_IN_KEY',    'Mettere la vostra frase unica qui');
+define('NONCE_KEY',        'Mettere la vostra frase unica qui');
+define('AUTH_SALT',        'Mettere la vostra frase unica qui');
+define('SECURE_AUTH_SALT', 'Mettere la vostra frase unica qui');
+define('LOGGED_IN_SALT',   'Mettere la vostra frase unica qui');
+define('NONCE_SALT',       'Mettere la vostra frase unica qui');
+
 /**#@-*/
+
 /**
  * Prefisso Tabella del Database WordPress.
  *
@@ -59,6 +65,7 @@ define('NONCE_SALT', 'HU3;_(SQ/2DHhA6-87+jh@*;P}{5koPw=dv~l*l@GA;C,}w]AI-IbrZ#G$
  * Solo numeri, lettere e sottolineatura!
  */
 $table_prefix = 'wp_';
+
 /**
  * Per gli sviluppatori: modalità di debug di WordPress.
  *
@@ -72,11 +79,12 @@ $table_prefix = 'wp_';
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define('WP_DEBUG', false);
-define('WP_POST_REVISIONS', 3);define('DISALLOW_FILE_EDIT', true);
-define('AUTOSAVE_INTERVAL', 120);
+
 /* Finito, interrompere le modifiche! Buon blogging. */
+
 /** Path assoluto alla directory di WordPress. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
+
 /** Imposta le variabili di WordPress ed include i file. */
 require_once(ABSPATH . 'wp-settings.php');

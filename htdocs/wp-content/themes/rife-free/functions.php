@@ -32,3 +32,15 @@ else{
 global $apollo13framework_a13;
 $apollo13framework_a13 = new Apollo13Framework();
 $apollo13framework_a13->start();
+
+add_filter( 'the_content', 'njengah_remove_autop', 0 );
+
+function njengah_remove_autop($content) {
+
+// remove autop
+
+remove_filter( 'the_content', 'wpautop' );
+
+
+return $content;
+}

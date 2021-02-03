@@ -79,8 +79,38 @@ class SearchWP_Live_Search_Form extends SearchWP_Live_Search {
 		add_filter( 'get_search_form', array( $this, 'get_search_form' ), 999, 1 );
 		add_action( 'wp_footer', array( $this, 'base_styles' ) );
 
+		// Gutenberg integration.
+		add_filter( 'wp_footer', array( $this, 'gutenberg_integration' ) );
+
 		// The configs store all of the various configuration arrays that can be used at runtime.
 		$this->configs = apply_filters( 'searchwp_live_search_configs', $this->configs );
+	}
+
+	/**
+	 * Take over search blocks by adding body class.
+	 *
+	 * @param array $classes
+	 * @return array
+	 */
+	function gutenberg_integration() {
+		if ( apply_filters( 'searchwp_live_search_hijack_search_form_block', true ) ) {
+			$engine = apply_filters( 'searchwp_live_search_get_search_form_engine', 'default' );
+			$config = apply_filters( 'searchwp_live_search_get_search_form_config', 'default' );
+
+			// Allow for block-specific.
+			$engine = apply_filters( 'searchwp_live_search_get_search_form_engine_blocks', $engine );
+			$config = apply_filters( 'searchwp_live_search_get_search_form_config_blocks', $config );
+
+			?>
+			<script>
+			var _SEARCHWP_LIVE_AJAX_SEARCH_BLOCKS = true;
+			var _SEARCHWP_LIVE_AJAX_SEARCH_ENGINE = '<?php echo esc_js( $engine ); ?>';
+			var _SEARCHWP_LIVE_AJAX_SEARCH_CONFIG = '<?php echo esc_js( $config ); ?>';
+			</script>
+			<?php
+		}
+
+		return $classes;
 	}
 
 	/**

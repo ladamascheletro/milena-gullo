@@ -4,7 +4,7 @@ Tags: coming soon page, under construction mode, under construction, under const
 Requires at least: 4.0
 Requires PHP: 5.2
 Tested up to: 5.6
-Stable tag: 3.86
+Stable tag: 3.87
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,26 +13,24 @@ Easy to use Under Construction Page & Coming Soon Page. Enable Under Constructio
 
 == Description ==
 
-Create an Under Construction Page, Maintenance Mode Page, Coming Soon Page or a Landing Page that takes **less than a minute to install & configure**. Under Construction won't waste your time! It's simple, fast, efficient & user-friendly with <a href="https://underconstructionpage.com/?utm_source=wordpressorg&utm_medium=content&utm_campaign=readme&utm_content=great-designs#designs">great templates</a> users love.
+Create an Under Construction Page, Maintenance Mode Page, Coming Soon Page or a Landing Page that takes **less than a minute to install & configure**. Under Construction won't waste your time! It's simple, fast, efficient & user-friendly with <a href="https://underconstructionpage.com/#designs">great templates</a> users love.
 
 [youtube https://www.youtube.com/watch?v=fqqWrQENSDc]
 
-> **PRO** version offers more than 50 extra features and options including the drag&drop builder, over a million hi-res searchable images, 200+ templates, affiliate&traffic tracking, advanced access control, MailChimp, Zapier & universal autoresponder integration, white-label license mode and priority support. Find out more on the <a href="https://underconstructionpage.com/?utm_source=wordpressorg&utm_medium=content&utm_campaign=readme&utm_content=official-site">official plugin site</a>.
+> **PRO** version offers more than 50 extra features and options including the drag&drop builder, over a million hi-res searchable images, 200+ templates, affiliate&traffic tracking, advanced access control, MailChimp, Zapier & universal autoresponder integration, white-label license mode and priority support. Find out more on the <a href="https://underconstructionpage.com/">official plugin site</a>.
 
-A simple, no-nonsense under construction plugin for all those situations when you have to hide the site behind an Under Construction page for a while. Live examples are available on the <a href="https://underconstructionpage.com/?utm_source=wordpressorg&utm_medium=content&utm_campaign=readme&utm_content=website">Under Construction website</a>. Give us a shout on Twitter <a href="http://twitter.com/WebFactoryLtd">@WebFactoryLtd</a> or check out the <a href="https://youtu.be/fqqWrQENSDc">video</a>.
+A simple, no-nonsense under construction plugin for all those situations when you have to hide the site behind an Under Construction page for a while. Live examples are available on the <a href="https://underconstructionpage.com/">Under Construction website</a>. Give us a shout on Twitter <a href="http://twitter.com/WebFactoryLtd">@WebFactoryLtd</a> or check out the <a href="https://youtu.be/fqqWrQENSDc">video</a>.
 
 Thanks to our partnership with <a href="https://wordpress.org/plugins/weglot/">Weglot</a>, UCP is fully multilanguage ready and you can instantly translate your under construction page to 100+ languages with one click.
 
-Let <a href="https://wordpress.org/plugins/security-ninja/">Security Ninja</a> take care of your site's security from day one! Run over 50 security tests with one click. Get a detailed report and automatically fix security issues. Download it from the official wp.org repo for free.
-
-Web accessibility is not an option in 2021! Making your site accessible to visitors with disabilities will save you from hefty fines and instantly grow your audience. That's why we've partnered with <a href="https://wordpress.org/plugins/accessibe/">accessiBe</a> - the fully automated AI service for web accessibility. Download their free plugin, connect to the service, and make your site fully accessible in a few clicks.
+Web accessibility is not an option in 2021! Making your site accessible to visitors with disabilities will save you from hefty fines and instantly grow your audience. That's why we've partnered with <a href="https://wordpress.org/plugins/accessibe/">accessiBe</a> - the fully automated AI service for web accessibility. Download their free plugin, connect to the service, and make your site accessible in a few clicks.
 
 **Options**
 
 * Under construction mode - on / off
 * Automatic End date & time - automatically disable under construction mode on a set date
 * Google Analytics Tracking ID - enable tracking via Google Analytics
-* Theme - <a href="https://underconstructionpage.com/templates/?utm_source=wordpressorg&utm_medium=content&utm_campaign=readme&utm_content=available-themes">test all available themes (200+)</a>
+* Theme - <a href="https://underconstructionpage.com/templates/">test all available themes (200+)</a>
 * Custom CSS - adjust any part of the page to fit your needs
 * Title - page title, for SEO
 * Description - page description, for SEO
@@ -68,7 +66,6 @@ Under Construction Page is compatible with the following caching plugins: W3 Tot
 * <a href="https://www.webhostingsecretrevealed.net/blog/blogging-tips/how-to-grow-your-blog-before-it-is-born/">WHSR</a> wrote an in-depth guide on how to "Grow Your Blog Before It Is Born" featuring Under Construction Page
 * John Fraskos from <a href="https://codestag.com/setting-wordpress-theme-easily-create-construction-page/">Codestag</a> says it's "very friendly and easy to use"
 * <a href="http://wppluginsify.com/interface-elements/professional-construction-page/">WP Pluginsify</a> wrote a review
-* <a href="https://www.wpmayor.com/set-construction-page-wordpress/">WP Major</a> wrote a review too
 * Erik from <a href="http://nopassiveincome.com/under-construction-page-plugin-review/">NoPassiveIncome</a> points out: "plugin is so easy and quick to use"
 * <a href="https://planetwp.com/underconstruction-page-plugin/">Planet WP</a> gave it 5/5 stars
 * <a href="https://firstsiteguide.com/under-construction-page-review/">FirstSiteGuide</a> says: "a perfect choice"
@@ -137,6 +134,10 @@ Or if needed, upload manually;
 
 
 == Changelog ==
+
+= 3.87 =
+* 2021/01/30
+* removed promo for WF plugins
 
 = 3.86 =
 * 2021/01/20

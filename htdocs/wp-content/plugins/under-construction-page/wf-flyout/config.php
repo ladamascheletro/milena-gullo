@@ -1,8 +1,8 @@
 <?php
 $config['plugin_screen'] = 'settings_page_ucp';
 $config['icon_border'] = '2px solid #ff7900';
-$config['icon_right'] = '35px';
-$config['icon_bottom'] = '35px';
+$config['icon_right'] = '40px';
+$config['icon_bottom'] = '30px';
 $config['icon_image'] = 'ucp.png';
 $config['icon_padding'] = '6px';
 $config['icon_size'] = '55px';

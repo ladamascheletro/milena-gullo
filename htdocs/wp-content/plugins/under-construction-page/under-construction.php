@@ -4,7 +4,7 @@
   Plugin URI: https://underconstructionpage.com/
   Description: Put your site behind a great looking under construction, coming soon, maintenance mode or landing page.
   Author: WebFactory Ltd
-  Version: 3.86
+  Version: 3.87
   Requires at least: 4.0
   Requires PHP: 5.2
   Tested up to: 5.6
@@ -102,9 +102,6 @@ class UCP {
       add_action('wp_ajax_ucp_dismiss_survey', array(__CLASS__, 'dismiss_survey_ajax'));
       add_action('wp_ajax_ucp_submit_survey', array(__CLASS__, 'submit_survey_ajax'));
       add_action('wp_ajax_ucp_submit_support_message', array(__CLASS__, 'submit_support_message_ajax'));
-
-      add_filter('install_plugins_table_api_args_featured', array(__CLASS__, 'featured_plugins_tab'));
-      add_filter('install_plugins_table_api_args_recommended', array(__CLASS__, 'featured_plugins_tab'));
     } else {
       // main plugin logic
       add_action('wp', array(__CLASS__, 'display_construction_page'), 0, 1);
@@ -1188,7 +1185,7 @@ class UCP {
         break;
         case 'heading1':
         case 'content':
-          $options[$key] = wp_kses(trim($value), wp_kses_allowed_html('post'));
+          $options[$key] = trim(wp_kses($value, wp_kses_allowed_html('post')));
         break;
         case 'custom_css':
         case 'social_facebook':
@@ -2516,69 +2513,6 @@ class UCP {
       return false;
     }
   } // is_weglot_setup
-
-
-  // helper function for adding plugins to fav list
-  static function featured_plugins_tab($args) {
-    add_filter('plugins_api_result', array(__CLASS__, 'plugins_api_result'), 10, 3);
-
-    return $args;
-  } // featured_plugins_tab
-
-
-  // add single plugin to list of favs
-  static function add_plugin_favs($plugin_slug, $res) {
-    if (!isset($res->plugins) || !is_array($res->plugins)) {
-      return $res;
-    }
-
-    if (!empty($res->plugins) && is_array($res->plugins)) {
-      foreach ($res->plugins as $plugin) {
-        if (is_object($plugin) && !empty($plugin->slug) && $plugin->slug == $plugin_slug) {
-          return $res;
-        }
-      } // foreach
-    }
-
-    $plugin_info = get_transient('wf-plugin-info-' . $plugin_slug);
-
-    if (!$plugin_info) {
-      $plugin_info = plugins_api('plugin_information', array(
-        'slug'   => $plugin_slug,
-        'is_ssl' => is_ssl(),
-        'fields' => array(
-          'banners'           => true,
-          'reviews'           => true,
-          'downloaded'        => true,
-          'active_installs'   => true,
-          'icons'             => true,
-          'short_description' => true,
-        )
-      ));
-      if (!is_wp_error($plugin_info)) {
-        set_transient('wf-plugin-info-' . $plugin_slug, $plugin_info, DAY_IN_SECONDS * 7);
-      }
-    }
-
-    if ($plugin_info && !is_wp_error($plugin_info)) {
-      array_unshift($res->plugins, $plugin_info);
-    }
-
-    return $res;
-  } // add_plugin_favs
-
-
-  // add our plugins to recommended list
-  static function plugins_api_result($res, $action, $args) {
-    remove_filter('plugins_api_result', array(__CLASS__, 'plugins_api_result'), 10, 3);
-
-    $res = self::add_plugin_favs('eps-301-redirects', $res);
-    $res = self::add_plugin_favs('simple-author-box', $res);
-    $res = self::add_plugin_favs('security-ninja', $res);
-    $res = self::add_plugin_favs('accessibe', $res);
-
-    return $res;
-  } // plugins_api_result
 
 
   // reset pointers on activation
